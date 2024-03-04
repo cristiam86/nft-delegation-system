@@ -4,7 +4,7 @@ pragma solidity ^0.8.24;
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
 // Uncomment this line to use console.log
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 
 /**
  * @title NFT Delegation Registry
@@ -56,9 +56,7 @@ contract NFTDelegationRegistry {
       revert DelegatorIsNotTheOwner(msg.sender, nftAddress, tokenId);
     }
 
-    Delegation memory newDelegation;
-    newDelegation.delegatee = delegatee;
-    newDelegation.expiryTime = block.timestamp + duration;
+    Delegation memory newDelegation = Delegation(delegatee, block.timestamp + duration);
 
     delegations[nftAddress][tokenId] = newDelegation;
 
