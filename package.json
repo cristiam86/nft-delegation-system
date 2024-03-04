@@ -2,7 +2,8 @@
   "name": "hardhat-project",
   "scripts": {
     "analyzer:slither": "slither --config-file analyzers/slither.config.json .",
-    "analyzer:mythril": "myth analyze contracts/NFTDelegationRegistry.sol --solc-json analyzers/mythril.solc.json"
+    "analyzer:mythril": "myth analyze contracts/NFTDelegationRegistry.sol --solc-json analyzers/mythril.solc.json",
+    "deploy:mumbai": "npx hardhat run scripts/deploy.ts --network mumbai"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
