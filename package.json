@@ -1,5 +1,9 @@
 {
   "name": "hardhat-project",
+  "scripts": {
+    "analyzer:slither": "slither --config-file analyzers/slither.config.json .",
+    "analyzer:mythril": "myth analyze contracts/NFTDelegationRegistry.sol --solc-json analyzers/mythril.solc.json"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
