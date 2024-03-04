@@ -1,4 +1,4 @@
-# Assignment Title: Smart Contract Development for NFT Delegation System
+# Smart Contract Development for NFT Delegation System
 This challenge consists of the implementation of a NFT delegation system. The full description can be found here: [Description of the assignment](assignment_description.md)
 ## Solution Approaches
 To solve the challenge, I have researched three different approaches:
@@ -32,10 +32,12 @@ npx hardhat test
 ### Analyzers
 Two static analyzers have been included to perform a basic initial audit on every change in the code.
 #### Slither
-[more info](https://github.com/crytic/slither)
+You can find more info of this tools [here](https://github.com/crytic/slither)
+
 To install this tool you should execute the following: `$ python3 -m pip install slither-analyzer` and to run it over this project you can run `npm run analyzer:slither`.
 #### Mythril
-[more info](https://github.com/Consensys/mythril)
+You can find more info of this tools [here](https://github.com/Consensys/mythril)
+
 To install this tool you should execute the following: `$ pip3 install mythril` and to run it over this project you can run `npm run analyzer:mythril`.
 ## Deployment
 To deploy the NFTDelegationRegistry smart contract, a coupld of variables (`INFURA_API_KEY` and `MUMBAI_PRIVATE_KEY`) need to be created in the Hardhat environment as follows:
